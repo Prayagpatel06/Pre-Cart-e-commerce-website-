@@ -622,7 +622,7 @@ const products = [
     category: "groceries",
     price: 179,
     description: "Crunchy and buttery cookies perfect for snacks and tea time.",
-    image: "https://m.media-amazon.com/images/I/617MS6ibaqL._SL1500_.jpgg"
+    image: "https://m.media-amazon.com/images/I/617MS6ibaqL._SL1500_.jpg"
 },
 {
     id: 80,
@@ -1269,4 +1269,5 @@ function formatCurrency(amount) {
         return `₹${(Math.round(amount * 100) / 100).toFixed(2)}`;
     }
 }
+
 
