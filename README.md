@@ -94,14 +94,4 @@ All styles are in `styles.css`. Modify CSS variables at the top for easy theme c
 - Internal links between pages are plain relative links (no framework/router).
 - Product data is mocked in `script.js` for demo purposes only.
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is open source and available for personal use.
 
