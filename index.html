@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Cart - Your Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Pre-Cart</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <form id="globalSearchForm" class="nav-search" onsubmit="return false;">
+                    <input type="search" id="globalSearchInput" placeholder="Search products" aria-label="Search products">
+                </form>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Pre-cart</h1>
+            <p>Discover amazing products at unbeatable prices</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="navigateToCategory('fashion')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09D4baIn-jFKZZEQkRkvqFIQrLIPOqB7VcQ&s" alt="Fashion" class="category-icon">
+                    <h3>Fashion</h3>
+                    <p>Latest trends in clothing</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('electronics')">
+                    <img src="https://th.bing.com/th/id/OIP.kxBhYT2UFkI_Go3CowziYgHaEO?w=305&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion" class="category-icon">
+                    <h3>Electronics</h3>
+                    <p>Tech gadgets & devices</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('home')">
+                    <img src="https://i.pinimg.com/originals/ea/04/db/ea04dbd56534a28c0707e44b736329bd.jpg" alt="Fashion" class="category-icon">
+                    <h3>Home & Living</h3>
+                    <p>Furniture & decor</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('sports')">
+                    <img src="https://th.bing.com/th/id/OIP.nruq7RFnZCCX7yNoGhmamAHaFb?w=213&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion" class="category-icon">
+                    <h3>Sports</h3>
+                    <p>Fitness & outdoor gear</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('beauty')">
+                    <img src="https://img.freepik.com/premium-photo/natural-cosmetics-set-with-leaves-plants-green-background-natural-cosmetics-concept-ai-generation_168171-1811.jpg" alt="Fashion" class="category-icon">
+                    <h3>Beauty</h3>
+                    <p>Cosmetic & electronics equipment</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('books')">
+                    <img src="https://cdn.pixabay.com/photo/2024/08/21/17/32/books-8987008_1280.png" alt="Fashion" class="category-icon">
+                    <h3>books</h3>
+                    <p>The Alchemist,Atomic Habits,Psychology</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('kids')">
+                    <img src="https://static.vecteezy.com/system/resources/previews/023/188/750/non_2x/happy-international-children-s-day-for-children-s-celebration-generative-ai-free-photo.jpeg" alt="Fashion" class="category-icon">
+                    <h3>kids</h3>
+                    <p>Fun, comfy, and safe essentials for your little ones</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('pet')">
+                    <img src="https://thumbs.dreamstime.com/b/set-pets-white-background-72387628.jpg" alt="Fashion" class="category-icon">
+                    <h3>pet</h3>
+                    <p>Quality food, comfy beds, and essentials for pets</p>
+                </div>
+                <div class="category-card" onclick="navigateToCategory('groceries')">
+                    <img src="https://static.vecteezy.com/system/resources/previews/024/692/158/large_2x/food-grocery-store-shopping-illustration-with-foods-items-and-products-assortiment-on-the-supermarket-in-flat-cartoon-hand-drawn-templates-vector.jpg" alt="Fashion" class="category-icon">
+                    <h3>groceries</h3>
+                    <p>Everyday groceries for your kitchen — fresh, trusted, and full of goodness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pre-cart</h3>
+                    <p>Your trusted online shopping destination</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 1111111111</li>
+                        <li><i class="fas fa-envelope"></i> demo@precart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pre-cart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
